@@ -1,5 +1,6 @@
 package com.example.movieapp.screens.home
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -26,10 +27,10 @@ fun HomeScreen(navController: NavController){
         }
     }) {
         MainContent(navController = navController)
-
     }
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun MainContent(
     navController: NavController,movieList: List<Movie> = getMovies() ){
